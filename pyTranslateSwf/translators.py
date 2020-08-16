@@ -212,6 +212,9 @@ class MicrosoftAzureTranslator(Translator):
             self.headers["Ocp-Apim-Subscription-Region"] = subscription_region
 
     def _translate_all(self, input_strings: List[str]) -> List[str]:
+        if not input_strings:
+            return []
+
         body = [{"text": input_string} for input_string in input_strings]
 
         request = requests.post(self.url, headers=self.headers, json=body)
