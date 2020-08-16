@@ -1,0 +1,13 @@
+# for JPEGXActionScriptParser - optional, recommended
+regex
+
+# for Microsoft API translator
+uuid
+requests
+
+# for offline translator
+jamdict
+stanza
+
+# for running unit tests - optional
+pytest
